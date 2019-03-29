@@ -1,110 +1,195 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html>
+    <head>
+        <title>
+			Admin Dashboard
+		</title>
+    </head>
+    <body>
+        <h2>KHABRI DASHBOARD</h2>
+        <div class="type-1">
+            <h1>GENRES</h1>
+            <div>
+                <a href="/upload" class="btn btn-3">
+                    <span class="txt">SPORTS</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i></span>
+                </a><p></p>
+                <a href="/upload1" class="btn btn-3">
+                    <span class="txt">POLITICS</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i></span>
+                </a><p></p>
+                <a href="/upload2" class="btn btn-3">
+                    <span class="txt">SCIENCE</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i></span>
+                </a><p></p>
+                <a href="/upload3" class="btn btn-3">
+                    <span class="txt">CULTURE</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i></span>
+                </a><p></p>
+                <a href="/upload4" class="btn btn-3">
+                    <span class="txt">FINANCE</span>
+                    <span class="round"><i class="fa fa-chevron-right"></i></span>
+                </a><p></p>     
+                <a class="button" href="/">LOGOUT</a>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Management Board</title>
-	<meta name="description" content="Blueprint: A basic template for a responsive multi-level menu" />
-	<meta name="keywords" content="blueprint, template, html, css, menu, responsive, mobile-friendly" />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- food icons -->
-	<link rel="stylesheet" type="text/css" href="organicfoodicons.css" />
-	<!-- demo styles -->
-	<link rel="stylesheet" type="text/css" href="demo.css" />
-	<!-- menu styles -->
-	<link rel="stylesheet" type="text/css" href="component.css" />
-	<script src="modernizr-custom.js"></script>
-</head>
+            </div>
+        </div>
+        <style>
+            .button {
+                display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                padding: 11px 49px;
+                border: 1px solid #a12727;
+                border-radius: 8px;
+                background: #ff4a4a;
+                background: -webkit-gradient(linear, left top, left bottom, from(#ff4a4a), to(#992727));
+                background: -moz-linear-gradient(top, #ff4a4a, #992727);
+                background: linear-gradient(to bottom, #ff4a4a, #992727);
+                text-shadow: #591717 1px 1px 1px;
+                font: normal normal bold 20px times new roman;
+                color: #ffffff;
+                text-decoration: none;
+                width: 130px;
+            }
+            .button:hover,
+            .button:focus {
+                background: #ff5959;
+                background: -webkit-gradient(linear, left top, left bottom, from(#ff5959), to(#b62f2f));
+                background: -moz-linear-gradient(top, #ff5959, #b62f2f);
+                background: linear-gradient(to bottom, #ff5959, #b62f2f);
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .button:active {
+                background: #982727;
+                background: -webkit-gradient(linear, left top, left bottom, from(#982727), to(#982727));
+                background: -moz-linear-gradient(top, #982727, #982727);
+                background: linear-gradient(to bottom, #982727, #982727);
+            }
+            .button:before{
+                content:  "\0000a0";
+                display: inline-block;
+                height: 24px;
+                width: 24px;
+                line-height: 24px;
+                margin: 0 4px -6px -4px;
+                position: relative;
+                top: 0px;
+                left: 0px;
+                background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAEbUlEQVRIiZVVXUwUVxT+7rgstRJmU5ombPbMHTcESzTlp6aRLQFKsBoTa2xfoLUGAR+wpvWhVKuEPjQ20YaHaqNV6EPTSkz6ZJqwD6wBGg1NQ0twobXR8BdYiMACo9AuMHP6ALPuH7H9kpO5uefMN/f77jmZLQAUALzxFACE1LQ0V2Zms0tVf3SpqmvRMLrtnB2lgADRdZeq/uBS1W0uVf1t0TBWE+sUrMN+WpLIDeZOVVWbG06ceNHhcJyRRPsBWHgKa4zobafTWf/RqVOZWVlZTQAeSKI3Y2uQQA5JlCuJxg4fOsRjY2NsmiZ/ffky60QzOpEWU7dH17SltrY2Nk2TZ2dn+ZPGRpZEd2M+oCAWkugFSfSgvraWl5aW2DRNtiyLV1dX+f0jR1gS/SmJfDqRVyeabDp7lk3TjMZnzc0sibqQAgoARRLVlJeVsWEYbFlWXITDYa4oL2ed6LZONFR37BhHIpFo/nYgwLqm/S2JKmM546RIotKXc3O5t7c3+qKtwrIs/uv+fd5dVMRvHTzIi4uL0f35+Xl+vbiYJVFzqtM/tUhKRRJdKMjP5+C9e1Fy2wLLsnhwcJCnp6fjrDlz+jRLon6pac7NuG05ivR4HJLo26KCAg4Gg0lWJUZ3Vxd7dT0iiYpiLFES1vHQPR6nJPquMD+f+/r64hTErg3D4BKfjyXR5zk5OakIlZRfGJ2YWGEh6sLh8Dc1R4/i7p07AABmjtYwMx4bBoQQALBnLRLJ2EjFzcpmcpTx8XELQOfy8jJm5+YghEiKbLcbN9rb4fV6Kxm4JT2ejBR88Z1kwx6kq1euxNmT6h5CoRBXVlSwJOrRiDKTPE+EJPJKoqmmc+d4bW1t0zuIXYdCIX6jrIwlUackej6RMyppY5qDtTU1vLKyknTakZER7u7qSqlkcmKCS0tKWBJ9r+t60qUrmqY5JNFP+/ft44WFhSRbTNPk4/X1vDMvj3/ZGMbE/NDQEOft2MGS6ECcBE3TFEl04dXCQh4dHY0bJDt6enp4u5QsiSKv7NrF/f39Ke364vx5lkS3Yu1RBHN5Wlrax19dugRN05I6xjRNfHnxIpgZQginYRg4XleH8fFxAIjWzTx6hEAgAACzNrciiQCgunLvXqXY54uqiu17v9+PwWDQTgAAZmdmUFtTg6mpqWh9S0sLhh8+BIBKSVS1XdOwxaWqnwqgcXh4GD6fD263O3oqZoZlWfjw5EmE5+aSOm5hfh6Bzk7k5OTA39GBttbWdZWAKoB3GFgRkuixECIDANxuN9pv3oSmRf8t8Pv9+KChIVVHPxPM/EQB0GdvhCYn8W5VFQYGBsDMYGa0tbbGWYMY6/7D+nchidwAbgig3N5N37oV1dXVSE9Px/Vr18CWBQgRT/JsdDPwngCg6B4PWIgDABoAlNqW/V8w8xMAPwvgKpg7RicmILDeThYAJTs7G06HwwXgNQC7AewEoAN4CYALwHMbXP8AMABMQ4hRMA8B6APzr9sikYU/ZmYsm/df8Jgnto4s/scAAAAASUVORK5CYII=") no-repeat left center transparent;
+                background-size: 100% 100%;
+            }
 
-<body>
-	<!-- Main container -->
-	<div class="container">
-		<!-- Blueprint header -->
-		<header class="bp-header cf">
-			<div class="dummy-logo">
-				<div></div>
-				<h1 class="dummy-heading">Genres</h1>
-			</div>
-			<div class="bp-header__main">
-				<span class="bp-header__present">KHABRI <span class="bp-tooltip bp-icon bp-icon--about" data-content="This is KHABRI's Admin Dashboard"></span></span>
-				<h1 class="bp-header__title">Management Board</h1>
-				<nav class="bp-nav">
-					<a class="bp-nav__item bp-icon bp-icon--prev" href="/" data-info="LOGOUT"><span>Logout</span></a>
-					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<a class="bp-nav__item bp-icon bp-icon--archive" href="/upload" data-info="UPLOAD"><span>Upload</span></a>
-				</nav>
-			</div>
-		</header>
-		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-		<nav id="ml-menu" class="menu">
-			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			<div class="menu__wrap">
-				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="GENRES">
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Politics</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Science</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Sports</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Culture</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Finance</a></li>
-                </ul>
-			</div>
-		</nav>
-		<div class="content">
-            <p class="info">Please choose a category</p>
-            
-			<!-- Ajax loaded content here -->
-		</div>
-	</div>
-	<!-- /view -->
-	<script src="classie.js"></script>
-	<script src="dummydata.js"></script>
-	<script src="main.js"></script>
-	<script>
-	(function() {
-		var menuEl = document.getElementById('ml-menu'),
-			mlmenu = new MLMenu(menuEl, {
-				// breadcrumbsCtrl : true, // show breadcrumbs
-				// initialBreadcrumb : 'all', // initial breadcrumb text
-				backCtrl : false, // show back button
-				// itemsDelayInterval : 60, // delay between each menu item sliding animation
-				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-			});
 
-		// mobile menu toggle
-		var openMenuCtrl = document.querySelector('.action--open'),
-			closeMenuCtrl = document.querySelector('.action--close');
+            .btn { /* Blue background */
+                border: none; /* Remove borders */
+                color: #0F107A; /* White text */
+                padding: 12px 16px; /* Some padding */
+                font-size: 16px; /* Set a font size */
+                cursor: pointer; /* Mouse pointer on hover */
+                }
 
-		openMenuCtrl.addEventListener('click', openMenu);
-		closeMenuCtrl.addEventListener('click', closeMenu);
+                /* Darker background on mouse-over */
+                .btn:hover {
+                background-color: RoyalBlue;
+                }
+            body {
+            margin: 100px;
+            text-align: center;
+            background-color: #29113B;
+            }
+            body > div {
+            width: 33%;
+            float: left;
+            }
+            body > div > div {
+            margin-bottom: 15px;
+            }
 
-		function openMenu() {
-			classie.add(menuEl, 'menu--open');
-			closeMenuCtrl.focus();
-		}
+            h2{
+                margin-left: 1200px;
+                color: white;
+            }
 
-		function closeMenu() {
-			classie.remove(menuEl, 'menu--open');
-			openMenuCtrl.focus();
-		}
+            .btn-3 {
+            background-color: #5A5B5E;
+            }
+            .btn-3 .round {
+            background-color: #737478;
+            }
+            h1{
+                margin-left:650px;
+                color: #7B7982;
+            }
+            a {
+            text-decoration: none;
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            padding: 12px 53px 12px 23px;
+            color: #332163;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-weight: bold;
+            position: relative;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 200px;
+            margin-left: 600px;
+            }
+            a span {
+            position: relative;
+            z-index: 3;
+            }
+            a .round {
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            -webkit-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+            z-index: 2;
+            }
+            a .round i {
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            left: 50%;
+            margin-left: -4px;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            }
 
-		// simulate grid content loading
-		var gridWrapper = document.querySelector('.content');
+            .txt {
+            font-size: 14px;
+            line-height: 1.45;
+            }
 
-		function loadDummyData(ev, itemName) {
-			ev.preventDefault();
-
-			closeMenu();
-			gridWrapper.innerHTML = '';
-			classie.add(gridWrapper, 'content--loading');
-			setTimeout(function() {
-				classie.remove(gridWrapper, 'content--loading');
-				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-			}, 700);
-		}
-	})();
-	</script>
-</body>
-
+            .type-1 a:hover {
+            padding-left: 48px;
+            padding-right: 28px;
+            }
+            .type-1 a:hover .round {
+            width: calc(100% - 6px);
+            -moz-border-radius: 30px;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            }
+            .type-1 a:hover .round i {
+            left: 12%;
+            }
+        </style>
+    </body>
 </html>
